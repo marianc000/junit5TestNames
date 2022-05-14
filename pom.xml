@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.mycompany</groupId>
-    <artifactId>JUnit5Console</artifactId>
+    <groupId>custom.junit5</groupId>
+    <artifactId>junit5TestNames</artifactId>
     <version>1.0</version>
     <dependencies>
         <dependency>
@@ -66,54 +66,16 @@
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M6</version>
-<!--                <configuration>
-                    <statelessTestsetReporter implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5Xml30StatelessReporter">
-                        <disable>false</disable>
-                        <version>3.0</version>
-                        <usePhrasedFileName>false</usePhrasedFileName>
-                        <usePhrasedTestSuiteClassName>true</usePhrasedTestSuiteClassName>
-                        <usePhrasedTestCaseClassName>true</usePhrasedTestCaseClassName>
-                        <usePhrasedTestCaseMethodName>true</usePhrasedTestCaseMethodName>
-                    </statelessTestsetReporter>
-                    <consoleOutputReporter implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5ConsoleOutputReporter">
-                        <disable>false</disable>
-                        <encoding>UTF-8</encoding>
-                        <usePhrasedFileName>false</usePhrasedFileName>
-                       
-                    </consoleOutputReporter>
-                    <statelessTestsetInfoReporter implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5StatelessTestsetInfoReporter">
-                        <disable>false</disable>
-                        <usePhrasedFileName>false</usePhrasedFileName>
-                        <usePhrasedClassNameInRunning>true</usePhrasedClassNameInRunning>
-                        <usePhrasedClassNameInTestCaseSummary>true</usePhrasedClassNameInTestCaseSummary>
-                    </statelessTestsetInfoReporter>
-                </configuration>-->
-<!--                <dependencies>
-                    <dependency>
-                        <groupId>me.fabriciorby</groupId>
-                        <artifactId>maven-surefire-junit5-tree-reporter</artifactId>
-                        <version>0.1.0</version>
-                    </dependency>
-                </dependencies>
-                <configuration>
-                    <reportFormat>plain</reportFormat>
-                    <consoleOutputReporter>
-                        <disable>true</disable>
-                    </consoleOutputReporter>
-                    <statelessTestsetInfoReporter implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5StatelessTestsetInfoTreeReporter"/>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>default-test</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
-                    </execution>
-                </executions>-->
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/marianc000/junit5TestNames</url>
+        </repository>
+    </distributionManagement>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
