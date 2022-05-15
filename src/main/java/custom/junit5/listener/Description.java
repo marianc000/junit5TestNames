@@ -21,16 +21,16 @@ public class Description {
     }
 
     public void setMethodName(String methodName) {
-        this.methodName = methodName;
+        this.methodName = methodName + "()";
     }
 
     @Override
     public String toString() {
-        if (methodName != null) {
-            return displayName + " : " + className + "." + methodName;
-        } else {
-            return displayName + " : " + className;
+        String str = className + "." + methodName;
+        if (!displayName.equals(methodName)) {
+            str += " - " + displayName;
         }
-    }
 
+        return str;
+    }
 }

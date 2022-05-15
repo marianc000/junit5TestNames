@@ -2,6 +2,7 @@ package five.six;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
+import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
@@ -11,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 @TestMethodOrder(MethodName.class)
+@DisplayName("display name for the first class")
 public class BTest {
 
     @BeforeAll
@@ -36,36 +38,18 @@ public class BTest {
     @Test
     public void test1() {
         System.out.println("test1");
+        throw new NullPointerException("TEST");
     }
 
     @Test
+    @DisplayName("display name for test2")
     public void test2() {
         System.out.println("test2");
     }
 
     @Test
-    @DisplayName("display name for test3")
+    @Disabled("test3 disabled for demo")
     public void test3() {
         System.out.println("test3");
     }
-
-    @Test
-    @DisplayName("display name for test4")
-    public void test4() {
-        System.out.println("test4");
-    }
-
-    @Test
-    @Disabled("test5 disabled for demo")
-    public void test5() {
-        System.out.println("test5");
-    }
-
-    @Test
-    @Disabled("test6 disabled for demo")
-    @DisplayName("display name for test6")
-    public void test6() {
-        System.out.println("test6");
-    }
-
 }

@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
 @TestMethodOrder(MethodName.class)
+  @DisplayName("display name for the last class")
 public class ATest {
 
     @BeforeAll
@@ -34,38 +35,20 @@ public class ATest {
     }
 
     @Test
-    public void test1() {
-        System.out.println("test1");
+    public void testA() {
+        System.out.println("testA");
     }
 
     @Test
-    public void test2() {
-        System.out.println("test2");
+    @DisplayName("display name for testB")
+    public void testB() {
+        System.out.println("testB");
     }
 
     @Test
-    @DisplayName("display name for test3")
-    public void test3() {
-        System.out.println("test3");
+    @Disabled("testC disabled for demo")
+    @DisplayName("display name for testC")
+    public void testC() {
+        System.out.println("testC");
     }
-
-    @Test
-    @DisplayName("display name for test4")
-    public void test4() {
-        System.out.println("test4");
-    }
-
-    @Test
-    @Disabled("test5 disabled for demo")
-    public void test5() {
-        System.out.println("test5");
-    }
-
-    @Test
-    @Disabled("test6 disabled for demo")
-    @DisplayName("display name for test6")
-    public void test6() {
-        System.out.println("test6");
-    }
-
 }
