@@ -38,7 +38,7 @@ public class BTest {
     @Test
     public void test1() {
         System.out.println("test1");
-        throw new NullPointerException("TEST");
+     //   throw new NullPointerException("TEST");
     }
 
     @Test
