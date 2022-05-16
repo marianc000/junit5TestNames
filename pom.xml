@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.mycompany</groupId>
-    <artifactId>junit5TestNames</artifactId>
+    <groupId>custom.junit5</groupId>
+    <artifactId>PrintTestMethodNames</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
     <modules>
-        <module>testnames</module>
-        <module>tests</module>
+        <module>TestMethodNames</module>
+        <module>SampleTests</module>
     </modules>
     <dependencies>
         <dependency>
@@ -33,7 +33,6 @@
             <artifactId>junit-platform-suite-engine</artifactId>
             <version>1.8.2</version>
             <scope>test</scope>
- 
         </dependency>
     </dependencies>
     <build>
@@ -44,4 +43,9 @@
             </plugin>
         </plugins>
     </build>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+    </properties>
 </project>

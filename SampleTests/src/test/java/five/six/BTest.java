@@ -2,7 +2,6 @@ package five.six;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
-import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
@@ -38,7 +37,7 @@ public class BTest {
     @Test
     public void test1() {
         System.out.println("test1");
-     //   throw new NullPointerException("TEST");
+        throw new NullPointerException("TEST");
     }
 
     @Test
