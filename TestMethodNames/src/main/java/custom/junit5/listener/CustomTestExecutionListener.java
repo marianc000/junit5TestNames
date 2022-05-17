@@ -6,6 +6,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.stream.Collectors;
 import org.junit.platform.engine.TestExecutionResult;
 import org.junit.platform.engine.TestSource;
+import org.junit.platform.engine.support.descriptor.ClassSource;
 import org.junit.platform.engine.support.descriptor.MethodSource;
 import org.junit.platform.launcher.TestExecutionListener;
 import org.junit.platform.launcher.TestIdentifier;
@@ -19,11 +20,11 @@ public class CustomTestExecutionListener implements TestExecutionListener {
             d.setClassName(m.getJavaClass());
             d.setMethodName(m.getMethodName());
         }
-//        else if (ts instanceof ClassSource c) {
-//            d.setClassName(c.getJavaClass());
-//        } else if (ts != null) {
-//            throw new IllegalArgumentException("Unrecognized source");
-//        }
+        else if (ts instanceof ClassSource c) {
+            d.setClassName(c.getJavaClass());
+        } else if (ts != null) {
+            throw new IllegalArgumentException("Unrecognized source");
+        }
         return d;
     }
 
