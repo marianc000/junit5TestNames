@@ -36,19 +36,19 @@ public class ATest {
 
     @Test
     public void testA() {
-        System.out.println("testA");
+        System.out.println("huge output of testA");
     }
 
     @Test
     @DisplayName("display name for testB")
     public void testB() {
-        System.out.println("testB");
+        System.out.println("huge output of testB");
     }
 
     @Test
     @Disabled("testC disabled for demo")
     @DisplayName("display name for testC")
     public void testC() {
-        System.out.println("testC");
+        System.out.println("huge output of testC");
     }
 }

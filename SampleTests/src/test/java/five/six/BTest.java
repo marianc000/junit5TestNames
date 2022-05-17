@@ -36,19 +36,19 @@ public class BTest {
 
     @Test
     public void test1() {
-        System.out.println("test1");
+        System.out.println("huge output of test1");
         throw new NullPointerException("TEST");
     }
 
     @Test
     @DisplayName("display name for test2")
     public void test2() {
-        System.out.println("test2");
+        System.out.println("huge output of test2");
     }
 
     @Test
     @Disabled("test3 disabled for demo")
     public void test3() {
-        System.out.println("test3");
+        System.out.println("huge output of test3");
     }
 }

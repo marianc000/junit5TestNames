@@ -8,12 +8,12 @@
     </parent>
     <artifactId>SampleTests</artifactId>
     <dependencies>
-<!--        <dependency>
+        <dependency>
             <groupId>custom.junit5</groupId>
             <artifactId>TestMethodNames</artifactId>
             <version>1.0</version>
             <scope>test</scope>
-        </dependency>-->
+        </dependency>
     </dependencies>
  
 </project>
